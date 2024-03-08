@@ -92,3 +92,16 @@ Route::get('Média', function(Request $request){
 
     return 'A média do usuário'. $resultado; 
 });
+
+Route::get('Divisões', function(Request $request){ 
+
+    $Primeiraentrada = $request->input("Primeiranota"); 
+
+    $Segundaentrada = $request->input("Segundanota"); 
+
+    $Resultado = $Segundaentrada/$Primeiraentrada; 
+
+    return 'O resultado da divisão é ' . $Segundaentrada . ":" . $Primeiraentrada . '=' . $Resultado; 
+
+}); 
+
