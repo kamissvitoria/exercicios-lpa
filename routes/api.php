@@ -218,3 +218,11 @@ Route::get('Aumento' , function(Request $request){
 
 
 }); 
+
+Route::get('Soma', function(Request $request){ 
+
+    $Primeiraentrada = $request->input("Primeiranota"); 
+
+    $Segundaentrada = $request->input("Segundanota"); 
+
+    $Resultado = $Primeiraentrada + $Segundaentrada; 
