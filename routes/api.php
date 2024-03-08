@@ -72,4 +72,23 @@ Route::get('Multiplicação', function(Request $request){
 
 }); 
 
+Route::get('Média', function(Request $request){ 
+
+    $Primeiraentrada = $request->input("Primeiranota"); 
+
+    $Segundaentrada = $request->input("Segundanota"); 
+
+    $Terceiraentrada = $request->input("Terceiranota"); 
+
+    $Quartaentrada = $request->input("Quartanota"); 
+
+    $Quintaentrada = $request->input("Quintanota"); 
+
+    $DIVISÃO = $request->input("DIVISÃO"); 
+
  
+
+    $resultado = ($Primeiraentrada + $Segundaentrada + $Terceiraentrada + $Quartaentrada + $Quintaentrada) / $DIVISÃO; 
+
+    return 'A média do usuário'. $resultado; 
+});
