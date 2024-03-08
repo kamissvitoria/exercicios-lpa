@@ -126,3 +126,13 @@ Route::get('Area' , function(Request $request){
    return 'A area do retângulo é ' . $resultado;  
 
 }); 
+
+oute::get('Porcentagem' , function(Request $request){ 
+
+    $preço = $request->input("Preço"); 
+
+    $porcentagem = $request->input("Porcentagem"); 
+
+    $resultado = $preço - ($preço * $porcentagem / 100); 
+
+    return 'O preço final do produto é ' . $resultado; 
