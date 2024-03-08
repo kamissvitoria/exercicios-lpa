@@ -179,3 +179,25 @@ Route::get('Dias' , function(Request $request){
 
 }); 
 
+Route::get('Compras', function(Request $request){  
+
+ 
+
+    $preçoProduto = $request->input("preço");  
+
+ 
+
+    $quantidadeComprada = $request->input("quantidade");  
+
+ 
+
+    $Resultado = $preçoProduto * $quantidadeComprada;  
+
+ 
+
+    return 'O valor total da compra é ' . $preçoProduto . '*'. $quantidadeComprada .'=' . $Resultado;  
+
+ 
+
+}); 
+
