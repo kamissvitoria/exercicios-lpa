@@ -114,3 +114,15 @@ Route::get('dobro' , function(Request $request){
     return $resultado; 
 
 }); 
+
+Route::get('Area' , function(Request $request){ 
+
+    $Base = $request->input("primeiraNota"); 
+
+    $Altura = $request->input("segundaNota"); 
+
+   $resultado = $Base * $Altura; 
+
+   return 'A area do retângulo é ' . $resultado;  
+
+}); 
