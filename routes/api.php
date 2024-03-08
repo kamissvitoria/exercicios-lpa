@@ -46,3 +46,15 @@ Route::get('Subtração', function(Request $request){
     return 'O resultado da subtração é ' . $Primeiraentrada . '-'. $Segundaentrada . '-' . $Terceiraentrada . '=' . $Resultado; 
 
 }); 
+
+Route::get('Divisão', function(Request $request){ 
+
+    $Primeiraentrada = $request->input("Primeiranota"); 
+
+    $Segundaentrada = $request->input("Segundanota"); 
+
+    $Resultado = $Primeiraentrada/$Segundaentrada; 
+
+    return 'O resultado da divisão é ' . $Primeiraentrada . ":" . $Segundaentrada . '=' . $Resultado; 
+
+});
