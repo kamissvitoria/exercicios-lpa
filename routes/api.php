@@ -127,7 +127,7 @@ Route::get('Area' , function(Request $request){
 
 }); 
 
-oute::get('Porcentagem' , function(Request $request){ 
+Route::get('Porcentagem' , function(Request $request){ 
 
     $preço = $request->input("Preço"); 
 
