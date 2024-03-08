@@ -105,3 +105,12 @@ Route::get('Divisões', function(Request $request){
 
 }); 
 
+Route::get('dobro' , function(Request $request){ 
+
+    $primeiraEntrada = $request->input("Numero1"); 
+
+    $resultado = $primeiraEntrada * 2;  
+
+    return $resultado; 
+
+}); 
