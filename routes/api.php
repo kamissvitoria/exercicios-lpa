@@ -58,3 +58,18 @@ Route::get('Divisão', function(Request $request){
     return 'O resultado da divisão é ' . $Primeiraentrada . ":" . $Segundaentrada . '=' . $Resultado; 
 
 });
+
+
+Route::get('Multiplicação', function(Request $request){ 
+
+    $Primeiraentrada = $request->input("Primeiranota"); 
+
+    $Segundaentrada = $request->input("Segundanota"); 
+
+    $Resultado = $Primeiraentrada * $Segundaentrada 
+
+    return 'O resultado da multiplicação é ' . $Primeiraentrada . '*'. $Segundaentrada .'=' . $Resultado; 
+
+}); 
+
+ 
