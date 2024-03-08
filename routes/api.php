@@ -136,3 +136,46 @@ Route::get('Porcentagem' , function(Request $request){
     $resultado = $preço - ($preço * $porcentagem / 100); 
 
     return 'O preço final do produto é ' . $resultado; 
+});
+
+Route::get('Porcentagem' , function(Request $request){ 
+
+    $preço = $request->input("Preço"); 
+
+    $porcentagem = $request->input("Porcentagem"); 
+
+    $resultado = $preço - ($preço * $porcentagem / 100); 
+
+    return 'O preço final do produto é ' . $resultado; 
+});
+
+Route::get('Vendas' , function(Request $request){ 
+
+    $totalVendas = $request->input("Total de vendas"); 
+
+    $comissão = ($totalVendas*5)/100; 
+
+    return $comissão; 
+
+
+
+}); 
+
+Route::get('Dias' , function(Request $request){ 
+
+    $numeroDias = $request->input("Dias"); 
+
+    $horas = $numeroDias*24; 
+
+    $minutos = $numeroDias*1440; 
+
+    $segundos = $numeroDias*86400; 
+
+    return 'Em ' . $numeroDias . 'Dias, temos ' . $horas .'Horas, ' . $minutos . 'minutos' . $segundos . 'segundos'; 
+
+
+
+
+
+}); 
+
