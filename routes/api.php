@@ -201,3 +201,20 @@ Route::get('Compras', function(Request $request){
 
 }); 
 
+Route::get('Aumento' , function(Request $request){ 
+
+    $salario = $request->input("salario"); 
+
+    $porcentagem = $request->input("porcentagem"); 
+
+    $conta = ($salario * $porcentagem) / 100; 
+
+    $resultado = $salario + $conta; 
+
+    return 'O salario anterior é de ' . $salario . ', o aumento percentual é de ' . $porcentagem . ' E o salario atual é' . $resultado; 
+
+
+
+
+
+}); 
