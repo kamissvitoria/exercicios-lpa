@@ -66,9 +66,8 @@ Route::get('Multiplicação', function(Request $request){
 
     $Segundaentrada = $request->input("Segundanota"); 
 
-    $Resultado = $Primeiraentrada * $Segundaentrada 
-
-    return 'O resultado da multiplicação é ' . $Primeiraentrada . '*'. $Segundaentrada .'=' . $Resultado; 
+    $Resultado = $Primeiraentrada * $Segundaentrada;
+    return $Resultado;
 
 }); 
 
@@ -84,11 +83,7 @@ Route::get('Média', function(Request $request){
 
     $Quintaentrada = $request->input("Quintanota"); 
 
-    $DIVISÃO = $request->input("DIVISÃO"); 
-
- 
-
-    $resultado = ($Primeiraentrada + $Segundaentrada + $Terceiraentrada + $Quartaentrada + $Quintaentrada) / $DIVISÃO; 
+     $resultado = ($Primeiraentrada + $Segundaentrada + $Terceiraentrada + $Quartaentrada + $Quintaentrada) / 5; 
 
     return 'A média do usuário'. $resultado; 
 });
@@ -215,8 +210,6 @@ Route::get('Aumento' , function(Request $request){
 
 
 
-
-
 }); 
 
 Route::get('Soma', function(Request $request){ 
@@ -226,3 +219,5 @@ Route::get('Soma', function(Request $request){
     $Segundaentrada = $request->input("Segundanota"); 
 
     $Resultado = $Primeiraentrada + $Segundaentrada; 
+    return $Resultado;
+});
