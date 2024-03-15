@@ -32,8 +32,8 @@ composer update
 ```
 code .
 ```
-5. Acessar o visual studio code
-``
+5. Acessar o visual studio code 
+```
 php artisan serve --port=80
 ```
 6. Importar o arquivo do Insomia
