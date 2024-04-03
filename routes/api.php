@@ -375,10 +375,27 @@ Route::get('exercicio12', function (Request $request) {
 
 Route::get('exercicio13', function (Request $request) {
     $nome = $request->input('nome');
-    if ($nome = Alice) {
-        return 'Olá, Alice!';
+    if($nome = "Alice"){
+        return "Olá, $nome";
     }
 });
+
+Route::get('exercicio14', function (Request $request) {
+$idade = $request->input('idade');
+$carteira = $request->input('carteira');
+
+    if ($idade >= 18 ){
+    if ($carteira == "sim"){
+
+        return "você pode dirigir";
+
+    }
+       
+    } else {
+        return "você não pode dirigir";
+    }
+
+});  
 
 
 Route::get('exercicio16', function (Request $request) {
@@ -394,3 +411,50 @@ Route::get('exercicio16', function (Request $request) {
         $numero2 . "iguais";
     }
 });
+
+Route::get('exercicio17', function (Request $request) {
+    $nome = $request->input('nome');
+    $idade = $request->input('idade');
+   if ($idade >= 18){
+    return "você é maior de idade, $nome!";
+   } else {
+    return "você não é maior de idade";
+   }
+
+});
+
+Route::get('exercicio18', function (Request $request) {
+    $primeiroNumero= $request->input('numero1');
+    $segundoNumero = $request->input('numero2');
+   if ($primeiroNumero == 0){
+    return  "não é possível efetuar a divisão pois o primeiro número é zero";
+   } else if ($segundoNumero== 0){
+    return "não é possível efetuar a divisão pois o primeiro número é zero";
+} else { $resultado = $primeiroNumero/$segundoNumero;
+return "o resultado da divisão é $resultado"; }
+
+});
+
+Route::get('exercicio19', function (Request $request) {
+    $numero1= $request->input('numero1');
+    $numero2 = $request->input('numero2');
+    $resultado = $numero1 * $numero2;
+    if ($resultado > 100){
+        return "o resultado $resultado é maior que 100";
+    }
+
+
+
+});
+
+Route::get('exercicio20', function (Request $request) {
+    $numero1= $request->input('numero1');
+    $numero2 = $request->input('numero2');
+    $soma = $numero1 + $numero2;
+    if ($soma % 2 == 0){
+        return $multiplicação = $numero1 * $numero2;
+    } else { 
+        $divisão = $numero1/$numero2; 
+        return $divisão;
+    }
+    });
